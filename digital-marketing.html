@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Marketing Course - Promote Products Online</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .marketing-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .lesson-section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .channel-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px 0;
+            text-align: center;
+        }
+        .strategy-showcase {
+            background: #f0f8ff;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #6366f1;
+        }
+        .campaign-demo {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .metric-box {
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .metric-box:hover {
+            border-color: #6366f1;
+            transform: translateY(-2px);
+        }
+        .funnel-stage {
+            background: #28a745;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 10px 0;
+            position: relative;
+        }
+        .funnel-stage::after {
+            content: '↓';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 20px;
+            color: #333;
+        }
+        .funnel-stage:last-child::after {
+            display: none;
+        }
+        .step-counter {
+            background: #6366f1;
+            color: white;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+        .lesson-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .back-button {
+            background: #6366f1;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin: 20px 0;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .social-platform {
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            transition: all 0.3s ease;
+        }
+        .social-platform:hover {
+            border-color: #6366f1;
+            transform: translateY(-2px);
+        }
+        .ad-creator {
+            background: #fff;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .ad-preview {
+            background: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .roi-calculator {
+            background: #e8f5e8;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .input-group {
+            margin: 15px 0;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+        .result-box {
+            background: #fff;
+            border: 2px solid #28a745;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 15px 0;
+            font-weight: bold;
+            text-align: center;
+        }
+        .analytics-dashboard {
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            min-height: 300px;
+        }
+        .content-calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .calendar-day {
+            background: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px;
+            min-height: 80px;
+            font-size: 12px;
+        }
+        .calendar-day.has-content {
+            background: #e3f2fd;
+            border-color: #6366f1;
+        }
+    </style>
+</head>
+<body>
+    <header class="hero" style="min-height: 200px;">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h2>SkillExplorer</h2>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#fundamentals">Fundamentals</a>
+                <a href="#channels">Channels</a>
+                <a href="#analytics">Analytics</a>
+            </div>
+        </nav>
+        
+        <div class="hero-content">
+            <h1>Digital Marketing Course</h1>
+            <p>Promote products and services online using modern marketing strategies</p>
+        </div>
+    </header>
+
+    <div class="marketing-container">
+        <a href="index.html" class="back-button">← Back to Courses</a>
+        
+        <section id="fundamentals" class="lesson-section">
+            <div class="lesson-header">
+                <div class="step-counter">1</div>
+                <h2>Digital Marketing Fundamentals</h2>
+            </div>
+            <p>Digital marketing encompasses all marketing efforts that use electronic devices or the internet to connect with current and prospective customers.</p>
+            
+            <h3>The Digital Marketing Funnel:</h3>
+            <div style="max-width: 400px; margin: 0 auto;">
+                <div class="funnel-stage" style="width: 100%;">
+                    <h4>🎯 Awareness</h4>
+                    <p>People discover your brand</p>
+                </div>
+                <div class="funnel-stage" style="width: 80%; margin: 20px auto;">
+                    <h4>🤔 Interest</h4>
+                    <p>Engage with your content</p>
+                </div>
+                <div class="funnel-stage" style="width: 60%; margin: 20px auto;">
+                    <h4>💭 Consideration</h4>
+                    <p>Compare your offerings</p>
+                </div>
+                <div class="funnel-stage" style="width: 40%; margin: 20px auto;">
+                    <h4>🎯 Intent</h4>
+                    <p>Show buying signals</p>
+                </div>
+                <div class="funnel-stage" style="width: 30%; margin: 20px auto;">
+                    <h4>💰 Purchase</h4>
+                    <p>Become customers</p>
+                </div>
+                <div class="funnel-stage" style="width: 25%; margin: 20px auto;">
+                    <h4>❤️ Loyalty</h4>
+                    <p>Repeat customers & advocates</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="channels" class="lesson-section">
+            <div class="lesson-header">
+                <div class="step-counter">2</div>
+                <h2>Digital Marketing Channels</h2>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0;">
+                <div class="channel-card" style="background: linear-gradient(135deg, #4267B2 0%, #365899 100%);">
+                    <h3>📱 Social Media Marketing</h3>
+                    <p>Promote your brand on social platforms</p>
+                    <ul style="text-align: left;">
+                        <li>Facebook, Instagram, Twitter</li>
+                        <li>LinkedIn, TikTok, YouTube</li>
+                        <li>Community building</li>
+                        <li>Influencer partnerships</li>
+                    </ul>
+                </div>
+                
+                <div class="channel-card" style="background: linear-gradient(135deg, #34A853 0%, #137333 100%);">
+                    <h3>🔍 Search Engine Optimization</h3>
+                    <p>Improve organic search visibility</p>
+                    <ul style="text-align: left;">
+                        <li>Keyword research</li>
+                        <li>On-page optimization</li>
+                        <li>Link building</li>
+                        <li>Technical SEO</li>
+                    </ul>
+                </div>
+                
+                <div class="channel-card" style="background: linear-gradient(135deg, #FBBC04 0%, #EA8600 100%);">
+                    <h3>💰 Pay-Per-Click Advertising</h3>
+                    <p>Paid ads on search engines and social media</p>
+                    <ul style="text-align: left;">
+                        <li>Google Ads</li>
+                        <li>Facebook Ads</li>
+                        <li>Display advertising</li>
+                        <li>Retargeting campaigns</li>
+                    </ul>
+                </div>
+                
+                <div class="channel-card" style="background: linear-gradient(135deg, #EA4335 0%, #D33B2C 100%);">
+                    <h3>📧 Email Marketing</h3>
+                    <p>Direct communication with your audience</p>
+                    <ul style="text-align: left;">
+                        <li>Newsletter campaigns</li>
+                        <li>Automated sequences</li>
+                        <li>Segmentation</li>
+                        <li>A/B testing</li>
+                    </ul>
+                </div>
+                
+                <div class="channel-card" style="background: linear-gradient(135deg, #9C27B0 0%, #7B1FA2 100%);">
+                    <h3>📝 Content Marketing</h3>
+                    <p>Create valuable content to attract customers</p>
+                    <ul style="text-align: left;">
+                        <li>Blog posts</li>
+                        <li>Videos & podcasts</li>
+                        <li>Infographics</li>
+                        <li>E-books & guides</li>
+                    </ul>
+                </div>
+                
+                <div class="channel-card" style="background: linear-gradient(135deg, #FF5722 0%, #E64A19 100%);">
+                    <h3>🤝 Affiliate Marketing</h3>
+                    <p>Partner with others to promote your products</p>
+                    <ul style="text-align: left;">
+                        <li>Affiliate programs</li>
+                        <li>Commission structures</li>
+                        <li>Partner recruitment</li>
+                        <li>Performance tracking</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <div class="lesson-header">
+                <div class="step-counter">3</div>
+                <h2>Social Media Strategy</h2>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 20px 0;">
+                <div class="social-platform">
+                    <h4>📘 Facebook</h4>
+                    <p><strong>Best for:</strong> Community building, older demographics</p>
+                    <p><strong>Content:</strong> Articles, videos, events</p>
+                    <p><strong>Ad Types:</strong> Image, video, carousel, lead ads</p>
+                </div>
+                
+                <div class="social-platform">
+                    <h4>📸 Instagram</h4>
+                    <p><strong>Best for:</strong> Visual brands, younger audience</p>
+                    <p><strong>Content:</strong> Photos, Stories, Reels, IGTV</p>
+                    <p><strong>Ad Types:</strong> Photo, video, Stories, shopping</p>
+                </div>
+                
+                <div class="social-platform">
+                    <h4>🐦 Twitter</h4>
+                    <p><strong>Best for:</strong> Real-time engagement, news</p>
+                    <p><strong>Content:</strong> Short updates, threads, polls</p>
+                    <p><strong>Ad Types:</strong> Promoted tweets, accounts, trends</p>
+                </div>
+                
+                <div class="social-platform">
+                    <h4>💼 LinkedIn</h4>
+                    <p><strong>Best for:</strong> B2B marketing, professionals</p>
+                    <p><strong>Content:</strong> Industry insights, networking</p>
+                    <p><strong>Ad Types:</strong> Sponsored content, message ads</p>
+                </div>
+                
+                <div class="social-platform">
+                    <h4>🎵 TikTok</h4>
+                    <p><strong>Best for:</strong> Gen Z, creative content</p>
+                    <p><strong>Content:</strong> Short videos, trends, challenges</p>
+                    <p><strong>Ad Types:</strong> In-feed, brand takeover, hashtag</p>
+                </div>
+                
+                <div class="social-platform">
+                    <h4>📺 YouTube</h4>
+                    <p><strong>Best for:</strong> Education, entertainment</p>
+                    <p><strong>Content:</strong> Long-form videos, tutorials</p>
+                    <p><strong>Ad Types:</strong> Pre-roll, display, bumper ads</p>
+                </div>
+            </div>
+            
+            <h3>Content Calendar Planning:</h3>
+            <div class="campaign-demo">
+                <h4>📅 Sample Weekly Content Calendar</h4>
+                <div class="content-calendar">
+                    <div style="font-weight: bold; text-align: center; padding: 5px;">Mon</div>
+                    <div style="font-weight: bold; text-align: center; padding: 5px;">Tue</div>
+                    <div style="font-weight: bold; text-align: center; padding: 5px;">Wed</div>
+                    <div style="font-weight: bold; text-align: center; padding: 5px;">Thu</div>
+                    <div style="font-weight: bold; text-align: center; padding: 5px;">Fri</div>
+                    <div style="font-weight: bold; text-align: center; padding: 5px;">Sat</div>
+                    <div style="font-weight: bold; text-align: center; padding: 5px;">Sun</div>
+                    
+                    <div class="calendar-day has-content">
+                        <strong>1</strong><br>
+                        Blog Post<br>
+                        Facebook Share
+                    </div>
+                    <div class="calendar-day">
+                        <strong>2</strong>
+                    </div>
+                    <div class="calendar-day has-content">
+                        <strong>3</strong><br>
+                        Instagram Story<br>
+                        LinkedIn Post
+                    </div>
+                    <div class="calendar-day">
+                        <strong>4</strong>
+                    </div>
+                    <div class="calendar-day has-content">
+                        <strong>5</strong><br>
+                        YouTube Video<br>
+                        Twitter Thread
+                    </div>
+                    <div class="calendar-day has-content">
+                        <strong>6</strong><br>
+                        Weekend Tips<br>
+                        Instagram Post
+                    </div>
+                    <div class="calendar-day">
+                        <strong>7</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <div class="lesson-header">
+                <div class="step-counter">4</div>
+                <h2>Google Ads & PPC Campaigns</h2>
+            </div>
+            
+            <div class="strategy-showcase">
+                <h4>🎯 Creating Your First Google Ad Campaign</h4>
+                <ol style="font-size: 16px; line-height: 1.8;">
+                    <li><strong>Define Objectives:</strong> What do you want to achieve? (Sales, leads, awareness)</li>
+                    <li><strong>Keyword Research:</strong> Find relevant search terms your audience uses</li>
+                    <li><strong>Create Ad Groups:</strong> Group similar keywords together</li>
+                    <li><strong>Write Compelling Ads:</strong> Headlines, descriptions, and call-to-actions</li>
+                    <li><strong>Set Bidding Strategy:</strong> How much you'll pay per click</li>
+                    <li><strong>Define Budget:</strong> Daily or campaign budget limits</li>
+                    <li><strong>Launch & Monitor:</strong> Track performance and optimize</li>
+                </ol>
+            </div>
+            
+            <div class="ad-creator">
+                <h4>📝 Ad Creator Tool</h4>
+                <p>Create your ad copy and see a preview:</p>
+                
+                <div class="input-group">
+                    <label for="headline1">Headline 1 (max 30 characters):</label>
+                    <input type="text" id="headline1" maxlength="30" placeholder="Best Digital Marketing Course" onkeyup="updateAdPreview()">
+                </div>
+                
+                <div class="input-group">
+                    <label for="headline2">Headline 2 (max 30 characters):</label>
+                    <input type="text" id="headline2" maxlength="30" placeholder="Learn from Experts" onkeyup="updateAdPreview()">
+                </div>
+                
+                <div class="input-group">
+                    <label for="description">Description (max 90 characters):</label>
+                    <input type="text" id="description" maxlength="90" placeholder="Master digital marketing with hands-on projects. Start today!" onkeyup="updateAdPreview()">
+                </div>
+                
+                <div class="input-group">
+                    <label for="finalUrl">Final URL:</label>
+                    <input type="text" id="finalUrl" placeholder="https://skillexplorer.com/digital-marketing" onkeyup="updateAdPreview()">
+                </div>
+                
+                <div class="ad-preview">
+                    <h4>Ad Preview:</h4>
+                    <div style="border: 1px solid #ddd; padding: 15px; border-radius: 4px; max-width: 400px;">
+                        <div style="color: #1a0dab; font-size: 18px; font-weight: 400;" id="previewHeadlines">Best Digital Marketing Course | Learn from Experts</div>
+                        <div style="color: #006621; font-size: 14px; margin: 5px 0;" id="previewUrl">skillexplorer.com/digital-marketing</div>
+                        <div style="color: #545454; font-size: 14px;" id="previewDescription">Master digital marketing with hands-on projects. Start today!</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <div class="lesson-header">
+                <div class="step-counter">5</div>
+                <h2>ROI Calculator & Campaign Performance</h2>
+            </div>
+            
+            <div class="roi-calculator">
+                <h4>💰 Marketing ROI Calculator</h4>
+                <p>Calculate the return on investment for your marketing campaigns:</p>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div>
+                        <div class="input-group">
+                            <label for="adSpend">Ad Spend ($):</label>
+                            <input type="number" id="adSpend" value="1000" onkeyup="calculateROI()">
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="revenue">Revenue Generated ($):</label>
+                            <input type="number" id="revenue" value="3000" onkeyup="calculateROI()">
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="clicks">Total Clicks:</label>
+                            <input type="number" id="clicks" value="500" onkeyup="calculateROI()">
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="conversions">Conversions:</label>
+                            <input type="number" id="conversions" value="25" onkeyup="calculateROI()">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="result-box">
+                            <h4>📊 Campaign Results</h4>
+                            <div id="roiResults">
+                                <p><strong>ROI:</strong> <span id="roiValue">200%</span></p>
+                                <p><strong>Cost Per Click:</strong> $<span id="cpcValue">2.00</span></p>
+                                <p><strong>Cost Per Conversion:</strong> $<span id="cpaValue">40.00</span></p>
+                                <p><strong>Conversion Rate:</strong> <span id="crValue">5.0%</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="analytics" class="lesson-section">
+            <div class="lesson-header">
+                <div class="step-counter">6</div>
+                <h2>Analytics & Key Metrics</h2>
+            </div>
+            
+            <h3>Essential Marketing Metrics:</h3>
+            <div class="metrics-grid">
+                <div class="metric-box">
+                    <h4>👁️ Impressions</h4>
+                    <p>How many times your ad was shown</p>
+                </div>
+                <div class="metric-box">
+                    <h4>🖱️ Click-Through Rate</h4>
+                    <p>Percentage of people who clicked your ad</p>
+                </div>
+                <div class="metric-box">
+                    <h4>💰 Cost Per Click</h4>
+                    <p>Average amount paid for each click</p>
+                </div>
+                <div class="metric-box">
+                    <h4>🎯 Conversion Rate</h4>
+                    <p>Percentage of visitors who convert</p>
+                </div>
+                <div class="metric-box">
+                    <h4>📊 Return on Ad Spend</h4>
+                    <p>Revenue generated per dollar spent</p>
+                </div>
+                <div class="metric-box">
+                    <h4>🔄 Customer Lifetime Value</h4>
+                    <p>Total value of a customer relationship</p>
+                </div>
+            </div>
+            
+            <div class="analytics-dashboard">
+                <h4>📈 Campaign Performance Dashboard</h4>
+                <canvas id="performanceChart"></canvas>
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <div class="lesson-header">
+                <div class="step-counter">7</div>
+                <h2>Email Marketing Automation</h2>
+            </div>
+            
+            <div class="strategy-showcase">
+                <h4>📧 Email Marketing Best Practices</h4>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0;">
+                    <div style="background: #f0f8ff; padding: 20px; border-radius: 8px;">
+                        <h4>✍️ Subject Lines</h4>
+                        <ul>
+                            <li>Keep under 50 characters</li>
+                            <li>Create urgency or curiosity</li>
+                            <li>Personalize when possible</li>
+                            <li>A/B test different versions</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="background: #f0fff0; padding: 20px; border-radius: 8px;">
+                        <h4>📱 Mobile Optimization</h4>
+                        <ul>
+                            <li>Use responsive design</li>
+                            <li>Large, tappable buttons</li>
+                            <li>Short paragraphs</li>
+                            <li>Optimize images</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="background: #fff5f5; padding: 20px; border-radius: 8px;">
+                        <h4>🎯 Segmentation</h4>
+                        <ul>
+                            <li>Demographics</li>
+                            <li>Purchase behavior</li>
+                            <li>Engagement level</li>
+                            <li>Lifecycle stage</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>Automated Email Sequences:</h3>
+            <div style="max-width: 600px; margin: 0 auto;">
+                <div class="funnel-stage" style="width: 100%;">
+                    <h4>Welcome Email</h4>
+                    <p>Immediate: Thank you & set expectations</p>
+                </div>
+                <div class="funnel-stage" style="width: 90%; margin: 20px auto;">
+                    <h4>Value-Add Email</h4>
+                    <p>Day 2: Helpful content or tips</p>
+                </div>
+                <div class="funnel-stage" style="width: 80%; margin: 20px auto;">
+                    <h4>Social Proof</h4>
+                    <p>Day 5: Customer testimonials</p>
+                </div>
+                <div class="funnel-stage" style="width: 70%; margin: 20px auto;">
+                    <h4>Special Offer</h4>
+                    <p>Day 7: Limited-time discount</p>
+                </div>
+                <div class="funnel-stage" style="width: 60%; margin: 20px auto;">
+                    <h4>Last Chance</h4>
+                    <p>Day 10: Final call to action</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <div class="lesson-header">
+                <div class="step-counter">8</div>
+                <h2>Hands-On Marketing Projects</h2>
+            </div>
+            
+            <div class="strategy-showcase">
+                <h4>🚀 Project 1: Complete Marketing Campaign</h4>
+                <p><strong>Skills:</strong> Strategy planning, multi-channel execution</p>
+                <p><strong>Deliverable:</strong> Full campaign from strategy to execution</p>
+                <p><strong>Channels:</strong> Social media, Google Ads, email marketing</p>
+                <p><strong>Time:</strong> 5-6 days</p>
+            </div>
+            
+            <div class="strategy-showcase">
+                <h4>📱 Project 2: Social Media Brand Presence</h4>
+                <p><strong>Skills:</strong> Content creation, community management</p>
+                <p><strong>Deliverable:</strong> 30-day content calendar and brand guidelines</p>
+                <p><strong>Platforms:</strong> Instagram, Facebook, LinkedIn</p>
+                <p><strong>Time:</strong> 4-5 days</p>
+            </div>
+            
+            <div class="strategy-showcase">
+                <h4>🔍 Project 3: SEO & Content Strategy</h4>
+                <p><strong>Skills:</strong> Keyword research, content optimization</p>
+                <p><strong>Deliverable:</strong> SEO audit and content improvement plan</p>
+                <p><strong>Focus:</strong> On-page SEO, content marketing</p>
+                <p><strong>Time:</strong> 4-5 days</p>
+            </div>
+            
+            <div class="strategy-showcase">
+                <h4>📧 Project 4: Email Marketing Automation</h4>
+                <p><strong>Skills:</strong> Email sequences, segmentation, A/B testing</p>
+                <p><strong>Deliverable:</strong> Complete email marketing funnel</p>
+                <p><strong>Tools:</strong> Mailchimp, Klaviyo, or ConvertKit</p>
+                <p><strong>Time:</strong> 3-4 days</p>
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <div class="lesson-header">
+                <div class="step-counter">9</div>
+                <h2>Career Paths & Industry Trends</h2>
+            </div>
+            
+            <div style="background: #e8f5e8; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                <h3>🎯 Digital Marketing Career Paths:</h3>
+                <ul style="font-size: 18px; line-height: 1.8;">
+                    <li><strong>Digital Marketing Manager:</strong> Oversee all digital marketing efforts</li>
+                    <li><strong>PPC Specialist:</strong> Focus on paid advertising campaigns</li>
+                    <li><strong>Social Media Manager:</strong> Manage brand presence on social platforms</li>
+                    <li><strong>Content Marketing Manager:</strong> Create and distribute valuable content</li>
+                    <li><strong>Email Marketing Specialist:</strong> Design and execute email campaigns</li>
+                    <li><strong>SEO Specialist:</strong> Improve organic search visibility</li>
+                </ul>
+            </div>
+            
+            <div style="background: #f0f8ff; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                <h3>🚀 Emerging Trends in Digital Marketing:</h3>
+                <ul>
+                    <li><strong>AI-Powered Marketing:</strong> Chatbots, personalization, predictive analytics</li>
+                    <li><strong>Voice Search Optimization:</strong> Optimizing for Alexa, Siri, Google Assistant</li>
+                    <li><strong>Video Marketing:</strong> Short-form content, live streaming, interactive videos</li>
+                    <li><strong>Privacy-First Marketing:</strong> Cookieless tracking, first-party data</li>
+                    <li><strong>Influencer Marketing Evolution:</strong> Micro-influencers, authentic partnerships</li>
+                    <li><strong>Interactive Content:</strong> Polls, quizzes, AR filters</li>
+                </ul>
+            </div>
+            
+            <div style="background: #fff3e0; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                <h3>🛠️ Essential Marketing Tools:</h3>
+                <ul>
+                    <li><strong>Analytics:</strong> Google Analytics, Facebook Analytics, Hotjar</li>
+                    <li><strong>Social Media:</strong> Hootsuite, Buffer, Sprout Social</li>
+                    <li><strong>Email Marketing:</strong> Mailchimp, ConvertKit, Klaviyo</li>
+                    <li><strong>SEO:</strong> SEMrush, Ahrefs, Moz</li>
+                    <li><strong>Design:</strong> Canva, Adobe Creative Suite</li>
+                    <li><strong>Automation:</strong> HubSpot, Marketo, Pardot</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function updateAdPreview() {
+            const headline1 = document.getElementById('headline1').value || 'Best Digital Marketing Course';
+            const headline2 = document.getElementById('headline2').value || 'Learn from Experts';
+            const description = document.getElementById('description').value || 'Master digital marketing with hands-on projects. Start today!';
+            const finalUrl = document.getElementById('finalUrl').value || 'https://skillexplorer.com/digital-marketing';
+            
+            document.getElementById('previewHeadlines').textContent = `${headline1} | ${headline2}`;
+            document.getElementById('previewDescription').textContent = description;
+            
+            // Extract domain from URL for display
+            try {
+                const domain = new URL(finalUrl).hostname.replace('www.', '');
+                document.getElementById('previewUrl').textContent = domain + '/...';
+            } catch {
+                document.getElementById('previewUrl').textContent = 'skillexplorer.com/...';
+            }
+        }
+        
+        function calculateROI() {
+            const adSpend = parseFloat(document.getElementById('adSpend').value) || 0;
+            const revenue = parseFloat(document.getElementById('revenue').value) || 0;
+            const clicks = parseFloat(document.getElementById('clicks').value) || 0;
+            const conversions = parseFloat(document.getElementById('conversions').value) || 0;
+            
+            const roi = adSpend > 0 ? (((revenue - adSpend) / adSpend) * 100) : 0;
+            const cpc = clicks > 0 ? (adSpend / clicks) : 0;
+            const cpa = conversions > 0 ? (adSpend / conversions) : 0;
+            const conversionRate = clicks > 0 ? ((conversions / clicks) * 100) : 0;
+            
+            document.getElementById('roiValue').textContent = roi.toFixed(1) + '%';
+            document.getElementById('cpcValue').textContent = cpc.toFixed(2);
+            document.getElementById('cpaValue').textContent = cpa.toFixed(2);
+            document.getElementById('crValue').textContent = conversionRate.toFixed(1) + '%';
+        }
+        
+        function initPerformanceChart() {
+            const ctx = document.getElementById('performanceChart').getContext('2d');
+            
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5', 'Week 6'],
+                    datasets: [
+                        {
+                            label: 'Impressions (thousands)',
+                            data: [25, 32, 28, 45, 52, 48],
+                            borderColor: '#6366f1',
+                            backgroundColor: 'rgba(99, 102, 241, 0.1)',
+                            yAxisID: 'y'
+                        },
+                        {
+                            label: 'Clicks (hundreds)',
+                            data: [1.2, 1.8, 1.5, 2.4, 2.8, 2.6],
+                            borderColor: '#28a745',
+                            backgroundColor: 'rgba(40, 167, 69, 0.1)',
+                            yAxisID: 'y1'
+                        },
+                        {
+                            label: 'Conversions',
+                            data: [8, 12, 10, 16, 19, 17],
+                            borderColor: '#dc3545',
+                            backgroundColor: 'rgba(220, 53, 69, 0.1)',
+                            yAxisID: 'y2'
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            type: 'linear',
+                            display: true,
+                            position: 'left',
+                            title: {
+                                display: true,
+                                text: 'Impressions (k)'
+                            }
+                        },
+                        y1: {
+                            type: 'linear',
+                            display: false,
+                            position: 'right'
+                        },
+                        y2: {
+                            type: 'linear',
+                            display: false,
+                            position: 'right'
+                        }
+                    },
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Campaign Performance Over Time'
+                        }
+                    }
+                }
+            });
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            initPerformanceChart();
+            calculateROI();
+            updateAdPreview();
+            
+            const cards = document.querySelectorAll('.metric-box, .social-platform, .strategy-showcase');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px)';
+                    this.style.transition = 'transform 0.3s ease';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

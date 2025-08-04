@@ -25,12 +25,34 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 150);
             
             setTimeout(() => {
-                if (skill === 'finance') {
-                    window.location.href = 'finance.html';
-                } else if (skill === 'emotional-intelligence') {
-                    window.location.href = 'emotional-intelligence.html';
-                } else {
-                    alert(`Great choice! "${skillName}" project details coming soon. You'll receive a curated project that takes 1-2 weeks to complete.`);
+                // Navigate to specific course pages
+                switch(skill) {
+                    case 'web-development':
+                        window.location.href = 'web-development.html';
+                        break;
+                    case 'data-science':
+                        window.location.href = 'data-science.html';
+                        break;
+                    case 'ui-design':
+                        window.location.href = 'ui-design.html';
+                        break;
+                    case 'mobile-dev':
+                        window.location.href = 'mobile-dev.html';
+                        break;
+                    case 'ai-ml':
+                        window.location.href = 'ai-ml.html';
+                        break;
+                    case 'digital-marketing':
+                        window.location.href = 'digital-marketing.html';
+                        break;
+                    case 'finance':
+                        window.location.href = 'finance.html';
+                        break;
+                    case 'emotional-intelligence':
+                        window.location.href = 'emotional-intelligence.html';
+                        break;
+                    default:
+                        alert(`Great choice! "${skillName}" project details coming soon. You'll receive a curated project that takes 1-2 weeks to complete.`);
                 }
             }, 300);
         });
