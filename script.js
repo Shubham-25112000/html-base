@@ -27,6 +27,8 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(() => {
                 if (skill === 'finance') {
                     window.location.href = 'finance.html';
+                } else if (skill === 'emotional-intelligence') {
+                    window.location.href = 'emotional-intelligence.html';
                 } else {
                     alert(`Great choice! "${skillName}" project details coming soon. You'll receive a curated project that takes 1-2 weeks to complete.`);
                 }
