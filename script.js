@@ -25,7 +25,11 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 150);
             
             setTimeout(() => {
-                alert(`Great choice! "${skillName}" project details coming soon. You'll receive a curated project that takes 1-2 weeks to complete.`);
+                if (skill === 'finance') {
+                    window.location.href = 'finance.html';
+                } else {
+                    alert(`Great choice! "${skillName}" project details coming soon. You'll receive a curated project that takes 1-2 weeks to complete.`);
+                }
             }, 300);
         });
     });
